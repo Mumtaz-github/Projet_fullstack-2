@@ -1,0 +1,481 @@
+ /*tous les pages sauf accueil*/
+ body {
+   background-image: url("../IMG/phot.avif");
+
+ }
+
+ #precedent,
+ #suivant,
+ #commande,
+ #contact,
+ #nex,
+ #pre,
+ #tou,
+ #tous,
+ #pla,#research {
+   color: rgb(21, 244, 238);
+   font-family: poppins;
+   font-weight: 150;
+   border: 3px solid rgb(21, 244, 238);
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   cursor: pointer;
+   font-size: 15px;
+   border-radius: 100px;
+   transition: .1s;
+   width: 147px;
+   vertical-align: middle;
+
+ }
+
+ .btn:hover {
+   box-shadow: 0 5px 50px 0 rgb(21, 244, 238) inset, 0 5px 50px 0 rgb(21, 244, 238),
+     0 5px 50px 0 rgb(21, 244, 238) inset, 0 5px 50px 0 rgb(21, 244, 238);
+   text-shadow: 0 0 5px rgb(21, 244, 238), 0 0 5px rgb(21, 244, 238);
+ }
+
+/*searchbar.php buttons*/
+ .commande-btn {
+  font-size: 10px;
+  background-color: #333;
+  position: absolute;
+   bottom: 410px;
+   /* right: 10px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+ /*  card formating page accueil-*/ /*#34c759*/
+ .card {
+   border: 5px;
+   background-color: #ff8c00;
+   border-radius: 50px;
+   margin: 0px;
+   padding: 5px;
+   
+ }
+ 
+ .card-title {
+   color:white; 
+    font-size: 32px;
+   font-weight: bolder;
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+ }  
+
+
+
+
+
+
+ .card-img-top {
+   border-radius: 45px;
+    height: 350px;
+      width: 390px;    
+   padding: 0px;
+ }
+
+
+ .custom-card {
+   max-width: 70%;
+   /* set a maximum width for the custom card */
+   margin: auto;
+   /* center the custom card horizontally */
+   padding: 20px;
+ }
+
+ /* pour image de accueil animation */
+  .card {
+   transition: .6s ease;
+ }
+
+ .card:hover {
+   transform: scale(1.1);
+ }
+
+ .n-hover {
+   transition: none;
+   transform: none;
+ }
+
+ .n-hover:hover {
+   transform: none;
+ } 
+
+
+
+
+ /*carousel hide the cards and scroll appear during flow, this commande solve this problem*/
+ .carousel-inner {
+ overflow: 0;
+ }
+
+ /*for plats.php page cards*/
+ .command-button-custom {
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+ }
+
+
+/*page accueil 3 plats */
+.dis-img-top {
+  border-radius: 45px;
+    height: 270px;
+     width: 390px;    
+  padding: 0px;
+
+}
+
+
+ /*for plats.php page cards*/
+ .dish-img-top {
+   width: 200px;
+   /* or any other size you want */
+   height: 284px;
+   /* or any other size you want */
+   object-fit: cover;
+   /* to maintain the aspect ratio */
+   border-radius: 40px;
+ }
+
+
+ /*zooming for all plats of page plats.php*/
+ .plats-card-zoom{
+  transition: .6s ease;
+}
+
+.plats-card-zoom:hover {
+  transform: scale(0.98);
+}
+
+.n-hover {
+  transition: none;
+  transform: none;
+}
+
+.n-hover:hover {
+  transform: none;
+} 
+
+
+
+
+
+ /*this is for footer*/
+  /* footer {
+   background-color: #ff8c00;
+   padding: 0;
+   margin: 10;
+   width:60%;
+   height: 70px;
+   left:130px;
+   right: 0px;
+     position: absolute; 
+     display: flex;   
+   /* justify-content: space-between; */
+   /* align-items: center;
+ }  */ */ */
+
+
+
+
+ /*this one is for socail icons between space*/
+
+ footer .btn-social {
+   margin: 0px;
+   /* width: calc(5% - 0px); */
+ }
+
+
+
+ h1 {
+   color:white;
+   font-size: 32px;
+   font-weight: bolder;
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+ }
+
+ /*tous les pages pour plats*/
+ h4 {
+   font-size: 20px;
+   font-weight: bolder;
+ }
+
+
+
+ h6 {
+   font-size: 15px;
+   font-weight: bolder;
+ }
+
+
+/*page categorie images */
+ img {
+   border-radius: 80px;
+ }
+
+
+ /*page commande */
+ .img-fluid {
+   width: 500px;
+   height: 300px;
+   border-radius: 30px;
+ }
+
+
+/*  .info-links {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 0px;
+
+ }
+
+ .info-link-left {
+   margin-right: 20px;
+ }
+
+ .info-link-right {
+   margin-left: 20px;
+ } */
+
+
+
+ /*pour page de commande*/
+ label {
+   color: whitesmoke;
+   font-size: 25px;
+   font-weight: bolder;
+ }
+ 
+
+body#mentions-legales-page {
+  background-image: none; /* or any other background style you prefer */
+ }
+ 
+
+
+/* nabar color,height for all pages except accueil */
+ .navbar {
+   background-color: #ff8c00;
+   height: 140px;
+   /* border-width: 8%;
+ border-style: inherit; */
+ }
+
+ /* for navbar text like accueil,categorie,plats and contact*/
+ .nav-link {
+   color: white;
+   font-size: 32px;
+   font-weight: 500;
+   position: relative;
+   font-weight: bolder;
+ }
+
+
+ .navbar a:hover {
+   background: rgb(143, 41, 41);
+   color: orange;
+ }
+
+
+ .navbar-toggler {
+   border: none;
+   font-size: 2.25rem;
+ }
+
+/*page accueil searchbar*/
+ .ongletrecherche input[type="search"] {
+  flex: 1;
+  margin-right: 5px;
+  height: 45px;
+  border-radius: 40px;
+  background-color: rgba(255,255,255, .4);
+  color:rgba(255,0,0,0.5) ;
+}
+
+.ongletrecherche button[type="submit"] {
+  background-color:  rgba(255,255,255, .4); /*transparent color rgba(255,0,0,0.5)*/
+  color: rgba(255,0,0,0.5);
+  padding: 5px 10px;
+  border-radius: 40px;
+  cursor: pointer;
+  height: 45px;
+}
+ /* search area on video  */
+  .ongletrecherche{                            
+  position: absolute;
+  top: 33%;
+  left: 44%;
+  border-radius: 50px;
+  transform:translate(-20%, -50%);
+  z-index: 1;
+  color: rgba(255,0,0,0.5);
+  font-weight: bold;
+  } 
+
+
+
+/*this is plats.php card, i disable zooming the cards in this page*/
+  .plats-card-no-zoom {
+    transform: none !important; /* disable zooming effect */
+    transition: none !important; /* disable transition effect */
+  }
+
+
+
+
+
+
+  /*this is for page accueil,categorie,commande cards zooming*/
+  .plats-container .card {
+    transition: .6s ease;
+  }
+  
+  .plats-container .card:hover {
+    transform: scale(0.97);
+  }
+  
+  .plats-container .n-hover {
+    transition: none;
+    transform: none;
+  }
+  
+  .plats-container .n-hover:hover {
+    transform: none;
+  }
+  
+ 
+body#parallax {
+  background-image: url('../IMG/photo.avif');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+/*.parallax {
+  /* The image used */
+ /* background-image: url("../IMG/photo.avif");*/
+
+  /* Full height */
+  /*height:1772px;*/
+ /* height:1860px;*/
+
+  /* Create the parallax scrolling effect */
+  /* background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+
+
+
+
+
+
+
+
+
+/*pour page de commande text obligatoire*/
+ span {
+   color: rgb(245, 76, 76);
+ }
+
+
+
+/*if i active this work good but in responsive mode the navigation links shows on navbar*/
+ /* accueil, categorie, plats,*/
+ /* .bottomnav {
+    float: none; 
+   position: absolute;
+   top: 30%;
+   left: 27%;
+ } */
+
+
+
+
+ video {
+   object-fit: fill;
+ }
+
+
+
+ /*
+.cards{
+  border-radius: 10px;
+ transform:all 0.8s ;
+
+ box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+  rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+   rgba(0, 0, 0, 0.1) 0px -px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+     rgba(0, 0, 0, 0.09) 0px 4px 2px,
+  rgba(0, 0, 0, 0.09) 0px 8px 4px,
+   rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.cards:hover{
+  transform: scale(1.15);
+}
+*/
+
+
+/* 
+.cards {
+  width: 300px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px var(--m-ombre);
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.cards:hover {
+  width: 300px;
+  height: 300px;
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  border-radius: 0%;
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+  transform: scale3d(1.2, 1.2, 1);
+}
+ */
+
+ 
+/* 
+.navbar a:hover {
+  background: rgb(143, 41, 41);
+  color:orange ;
+}
+
+.navbar-toggler{
+  border: none;
+  font-size: 2.25rem;
+ } */
+
+
+ 
+
+/*this one is for socail icons between space*/
+
+/* footer .btn-social {
+  margin: 0px;
+  width: calc(10% - 20px);
+}  */
