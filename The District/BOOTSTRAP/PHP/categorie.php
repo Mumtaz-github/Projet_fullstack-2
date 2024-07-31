@@ -51,9 +51,9 @@ $numSlides = ceil(count($categories) / $itemsPerSlide);
                   <div class="card">
 
                   <!-- Link to category page with image and overlay -->
-                  <a href="plats.php?category_id=<?= $category['id'];?>" style="position: relative; z-index: 1;"> </a><!--z-index: 1 make image clickable-->
+                  <a href="plats.php?category_id=<?= $category['id'];?>" style="position:relative; z-index: 1;"> <!--z-index: 1 make image clickable-->
                    <img src="img/<?= $category['image'];?>" class="card-img-top" alt="<?= $category['libelle'];?>">  <!-- Category image -->
-  
+                   </a>
 
                      <!-- Image overlay with category title -->
                     <div class="card-img-overlay text-center">
