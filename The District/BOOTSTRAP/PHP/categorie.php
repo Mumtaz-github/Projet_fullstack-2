@@ -39,14 +39,13 @@ $numSlides = ceil(count($categories) / $itemsPerSlide);
           <div class="carousel-item <?= $i === 0 ? 'active' : '' ?>"> <!-- Carousel item, active class added for the first item-->
             <div class="row row-cols-1 row-cols-md-3 gx-5"> <!--gx give space between categories in horizantally-->
               <?php foreach (array_slice($categories, $i * $itemsPerSlide, $itemsPerSlide) as $category) : ?> <!-- Loop through the categories for this slide, using array_slice to get the correct subset-->
-                <div class="col"> <!-- Column container for each category -->
+                <div class="col-md-4 mb-4 "> <!-- Column container for each category -->
                   <div class="card">
 
                     <!-- Link to category page with image and overlay -->
                     <a href="plats.php?category_id=<?= $category['id']; ?>" style="position:relative; z-index: 1;"> <!--z-index: 1 make image clickable-->
                       <img src="img/<?= $category['image']; ?>" class="card-img-top" alt="<?= $category['libelle']; ?>"> <!-- Category image -->
-                  
-                    <div class="card-img-overlay text-center"> <!-- Image overlay with category title -->
+                      <div class="card-img-overlay text-center"> <!-- Image overlay with category title -->
                       <div class="card-body">
                      <!-- Category title -->
                         <h5 class="card-title" style="position: absolute; bottom: 0px; left: 0; width: 100%;"><?= $category['libelle']; ?></h5>
