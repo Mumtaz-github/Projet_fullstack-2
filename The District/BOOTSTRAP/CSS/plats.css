@@ -36,15 +36,24 @@
 
 
 /*  card formating page accueil-*/ /*#34c759*/
- .card {
-   border: 5px;
-   background-color: #ff8c00;
-   border-radius: 50px;
-   margin: 0px;
-   padding: 5px;
-   
- }
+.card{             
+  /* border: 30px; */
+  background-color:#ff8c00;;
+    border-radius: 50px; 
+/*   margin: 10px; */
+} 
  
+
+/*searchbar.php buttons*/
+/* .commande-btn {
+  font-size: 10px;
+  background-color: #333;
+  position: absolute;
+   bottom: 410px; */
+   /* right: 10px; */
+/* } */
+
+
  .card-title {
    color:white; 
     font-size: 32px;
@@ -53,22 +62,33 @@
    text-align: center;
  }  
 
+ .card-img-top{
+  border-radius: 50px;
+  padding: 7px;
+}
 
- .card-img-top {
-   border-radius: 45px;
-    height: 350px;
-    width: 390px;    
-   padding: 0px;
- }
+.cards.body{
+  padding: 50px;
+  margin:-30px ;
+  }
+  
+   .card{             
+    /* border: 30px; */
+    background-color:#ff8c00;;
+      border-radius: 50px; 
+  /*   margin: 10px; */
+  } 
+   
 
 
+/* 
  .custom-card {
-   max-width: 70%;
+   max-width: 70%; */
    /* set a maximum width for the custom card */
-   margin: auto;
+   /* margin: auto; */
    /* center the custom card horizontally */
-   padding: 20px;
- }
+   /* padding: 20px;
+ } */
 
  /* pour image de accueil animation */
   .card {
@@ -104,26 +124,20 @@
  }
 
 
-/*page accueil 3 plats */
-.dis-img-top {
-  border-radius: 45px;
-    height: 270px;
-     width: 390px;    
-  padding: 0px;
+  /*page accueil 3 plats*/
+  .dis-img-top{
+    border-radius: 50px;
+    padding: 7px;
+    height:270px;
 
-}
+  }
+   /*pour plats.php images*/
+  .dish-img-top{
+    border-radius: 50px;
+    padding: 7px;
+    height:270px;
 
-
- /*for plats.php page cards*/
- .dish-img-top {
-   width: 200px;
-   /* or any other size you want */
-   height: 284px;
-   /* or any other size you want */
-   object-fit: cover;
-   /* to maintain the aspect ratio */
-   border-radius: 40px;
- }
+  }
 
 
  /*zooming for all plats of page plats.php*/
@@ -161,7 +175,7 @@
      display: flex;   
    /* justify-content: space-between; */
    /* align-items: center;
- }  */ */ */
+ }  */ 
 
 
 
@@ -198,9 +212,9 @@
 
 
 /*page categorie images */
- img {
+ /* img {
    border-radius: 80px;
- }
+ } */
 
 
  /*page commande */
@@ -423,8 +437,11 @@ body#parallax {
   filter: grayscale(0) blur(0px);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-}
+}img {
+   border-radius: 80px;
+ } */
 
+/*
 .cards:hover {
   width: 300px;
   height: 300px;
@@ -433,8 +450,8 @@ body#parallax {
   border-radius: 0%;
   -webkit-transform: scale3d(1.2, 1.2, 1);
   transform: scale3d(1.2, 1.2, 1);
-}
- */
+} */
+ 
 
  
 /* 
@@ -456,4 +473,4 @@ body#parallax {
 /* footer .btn-social {
   margin: 0px;
   width: calc(10% - 20px);
-}  */
+} 
