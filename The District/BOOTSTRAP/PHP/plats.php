@@ -56,7 +56,7 @@ if (isset($_GET['q'])) {  /*for searchbar of page accueil*/
         <?php endfor; ?>
       </div>
       <!-- Carousel controls -->
-      <div class="container-fluid mt-2 mb-2">
+      <div class="container-fluid mt-3 mb-3"> <!--this margin is for button and footerbar-->
         <div class="col">
           <div class="col d-flex justify-content-evenly">
             <button class="carousel-control-prev bg-primary d-none" id="carouselcatprec" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
