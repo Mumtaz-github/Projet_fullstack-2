@@ -1,4 +1,13 @@
 <?php
+$csrfToken = bin2hex(random_bytes(32)); // Generate a CSRF token
+$_SESSION['csrf_token'] = $csrfToken; // Store the CSRF token in the session
+
+ 
+ $searchQuery = trim($_GET['q']);  // Validate user input (e.g. search query)
+ $searchQuery = htmlspecialchars($searchQuery, ENT_QUOTES, 'UTF-8');
+
+echo $sanitized_input;
+echo htmlentities($searchQuery); // HTML encode output to prevent XSS
 
 require_once('database.php'); // Include the database.php file
 require_once('DAO.php');
@@ -15,14 +24,14 @@ $dish = getDishDetails($id);
 $id = $_GET['id']; // Validate and sanitize this input
 $dish = getDishDetails($id);
 
-// display the dish image
-$dishImage = $dish['image'];
+
+$dishImage = $dish['image']; // display the dish image or plat
 ?>
 <?php $showVideo = false; ?> <!--this one to stop video of header on page commande-->
 
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -31,7 +40,7 @@ $dishImage = $dish['image'];
   <title>Commande</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="../CSS/plats.css">
-</head>
+</head> -->
 <?php require_once('../PHP/header.php') ?>
 
 <!--line form and next input can be place above the container line but broke html input boxes-->
@@ -106,6 +115,3 @@ $dishImage = $dish['image'];
 <!-- <script src="../JAVASCRIPT/searchbar.js"></script> -->
 <script src="../JAVASCRIPT/commande.js"></script>
 <script src="../JAVASCRIPT/categplats.JS"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

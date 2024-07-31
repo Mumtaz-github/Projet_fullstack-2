@@ -1,14 +1,25 @@
 <?php $showVideo = true; ?>
 <?php
 
+// Start the session to store the CSRF token
+// session_start();
+
+
+$csrfToken = bin2hex(random_bytes(32)); // Generate a CSRF token
+$_SESSION['csrf_token'] = $csrfToken; // Store the CSRF token in the session
+
+
+$searchQuery = trim($_GET['q']);   // Validate user input (e.g. search query)
+$searchQuery = htmlspecialchars($searchQuery, ENT_QUOTES, 'UTF-8');
+echo $sanitized_input;
+echo htmlentities($searchQuery); // HTML encode output to prevent XSS
 
 require_once('header.php');
 require_once('database.php');
 require_once('DAO.php');
 
-// this functions for to display clickable accueil and categorie pages images, 
-//also display plats.php 6 plats 
-$dao = new DAO($conn);
+
+$dao = new DAO($conn);  // Create a new instance of the DAO class, passing in the database connection object./*  */
 
 
 if (isset($_GET['q'])) {  /*for searchbar of page accueil*/
@@ -40,15 +51,15 @@ if (isset($_GET['q'])) {  /*for searchbar of page accueil*/
                 <div class="col-md-6">
                   <div class="card flex-row plats-card-zoom"> <!--plats-card-no-zoom added for css to out from card zooming of this page-->
                     <a href="plats.php?id=<?= $dish['id']; ?>">
-                      <img src="img/<?= $dish['image']; ?>" style="width:10rem; height:15rem" class="dish-img-top" id="imgpla" alt="<?= $dish['libelle']; ?>">
+                      <img src="img/<?= $dish['image']; ?>" style="width:12rem; height:21rem" class="dish-img-top" id="imgpla" alt="<?= $dish['libelle']; ?>">
                     </a>
                     <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title"><?= $dish['libelle']; ?></h5>
-                      <p class="card-text"><?= $dish['description']; ?></p>
-                      <p class="card-text m-0">Prix: <?= $dish['prix']; ?> €</p>
-                      <a href="../PHP/Commande.php?id=<?= $dish['id']; ?>" class="btn btn-dark btn-lg rounded-pill command-button-custom" id="pla">Commander</a>
-                    </div>
+                      <div class="card-body">
+                        <h5 class="card-title"><?= $dish['libelle']; ?></h5>
+                        <p class="card-text"><?= $dish['description']; ?></p>
+                        <p class="card-text m-0">Prix: <?= $dish['prix']; ?> €</p>
+                        <a href="../PHP/Commande.php?id=<?= $dish['id']; ?>" class="btn btn-dark btn-lg rounded-pill command-button-custom" id="pla">Commander</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -58,7 +69,7 @@ if (isset($_GET['q'])) {  /*for searchbar of page accueil*/
         <?php endfor; ?>
       </div>
       <!-- Carousel controls -->
-      <div class="container-fluid mt-2 mb-2">
+      <div class="container-fluid mt-0 mb-0">
         <div class="col">
           <div class="col d-flex justify-content-evenly">
             <button class="carousel-control-prev bg-primary d-none" id="carouselcatprec" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
