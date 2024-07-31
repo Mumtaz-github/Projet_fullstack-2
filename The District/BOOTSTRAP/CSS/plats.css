@@ -34,26 +34,8 @@
    text-shadow: 0 0 5px rgb(21, 244, 238), 0 0 5px rgb(21, 244, 238);
  }
 
-/*searchbar.php buttons*/
- .commande-btn {
-  font-size: 10px;
-  background-color: #333;
-  position: absolute;
-   bottom: 410px;
-   /* right: 10px; */
-}
 
-
-
-
-
-
-
-
-
-
-
- /*  card formating page accueil-*/ /*#34c759*/
+/*  card formating page accueil-*/ /*#34c759*/
  .card {
    border: 5px;
    background-color: #ff8c00;
@@ -72,14 +54,10 @@
  }  
 
 
-
-
-
-
  .card-img-top {
    border-radius: 45px;
     height: 350px;
-      width: 390px;    
+    width: 390px;    
    padding: 0px;
  }
 
