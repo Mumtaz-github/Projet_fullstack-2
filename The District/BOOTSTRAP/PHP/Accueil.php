@@ -1,5 +1,5 @@
-<?php $showVideo = true; ?>
-<?php
+<?php $showVideo = true; 
+
 
 session_start();  // Start the session to store the CSRF token
 $csrfToken = bin2hex(random_bytes(32));  // Generate a CSRF token
@@ -7,13 +7,13 @@ $_SESSION['csrf_token'] = $csrfToken;  // Store the CSRF token in the session
 
 
 
-require_once('header.php');
+require_once('../PHP/header.php');
 require_once('database.php');
 require_once('DAO.php');  //  likely contains the Data Access Object (DAO) class to interact with database
 
 $dao = new DAO($conn);  // Create a new instance of the DAO class, passing in the database connection
 
-$categories = $dao->getPopularCategories(); // Use prepared statements to prevent SQL injection attacks
+$categories = $dao->getPopularCategories();     // Use prepared statements to prevent SQL injection attacks
 $bestSellingDishes = $dao->getBestSellingDishes();
 
 $searchQuery = trim($_GET['q']);   // Validate user input (e.g. search query)
@@ -21,7 +21,7 @@ $searchQuery = htmlspecialchars($searchQuery, ENT_QUOTES, 'UTF-8');
 echo htmlentities($searchQuery); // HTML encode output to prevent XSS
 ?>
 
-<?php require_once('../PHP/header.php') ?>
+
 
 <body id="parallax">
   <div class="container py-0">

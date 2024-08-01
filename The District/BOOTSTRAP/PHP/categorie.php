@@ -1,4 +1,4 @@
-<?php
+<?php $showVideo = true; 
 $csrfToken = bin2hex(random_bytes(32)); // Generate a CSRF token
 $_SESSION['csrf_token'] = $csrfToken; // Store the CSRF token in the session
 
@@ -9,8 +9,6 @@ $searchQuery = htmlspecialchars($searchQuery, ENT_QUOTES, 'UTF-8');
 echo $sanitized_input;
 echo htmlentities($searchQuery); // HTML encode output to prevent XSS
 
-$showVideo = true; ?>
-<?php
 require_once('header.php');
 require_once('database.php');
 require_once('DAO.php');
@@ -61,7 +59,7 @@ $numSlides = ceil(count($categories) / $itemsPerSlide); // Calculate the number 
       <div class="container-fluid mt-3 mb-3">
         <div class="col">
           <div class="col d-flex justify-content-between"><!--justify-content-between push the button towards x and y axis-->
-            <button class="carousel-control-prev bg-primary d-none" id="carouselcatprec" type="button" data-bs-target="#carouselExample" d data-bs-slide="prev">
+            <button class="carousel-control-prev bg-primary d-none" id="carouselcatprec" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </button>
             <button class="btn btn-dark btn-lg rounded-pill col-md-1 " onclick="precedent()" type="button" id="pre">Précédent</button>
