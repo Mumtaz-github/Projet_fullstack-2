@@ -77,7 +77,7 @@ try {
             </div>
         </div>
     </nav>
-<div class="image-container">
+    <div class="image-container">
         <!-- < ?php if ($_SERVER['REQUEST_URI']!== "/PHP/Commande.php") {?> -->
         <?php if ($showVideo) { ?> <!--this is one is added on place the above to show video on certain pages-->
             <video id="video" class="col-12" src="../IMG/mixk.mp4" style="width: 100%; height: 40vh;" playsinline autoplay loop muted></video>

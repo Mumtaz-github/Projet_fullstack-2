@@ -31,9 +31,7 @@ if (isset($_GET['q'])) {  /*for searchbar of page accueil*/
 } else {
   $dishes = $dao->getAllDishes();
 }
-
 ?>
-
 
 <body>
   <div class="container py-2">
@@ -51,7 +49,7 @@ if (isset($_GET['q'])) {  /*for searchbar of page accueil*/
                 <div class="col-md-6">
                   <div class="card flex-row plats-card-zoom"> <!--plats-card-no-zoom added for css to out from card zooming of this page-->
                     <a href="plats.php?id=<?= $dish['id']; ?>">
-                      <img class="dish-img-top" src="img/<?= $dish['image']; ?>" style="width:12rem; height:22rem"  id="imgpla" alt="<?= $dish['libelle']; ?>">
+                      <img class="dish-img-top" src="img/<?= $dish['image']; ?>" style="width:12rem; height:22rem" id="imgpla" alt="<?= $dish['libelle']; ?>">
                     </a>
                     <div class="col-md-8">
                       <div class="card-body">

@@ -2,6 +2,7 @@
 //echo "Mail.php file executed"; this one for test that phpmailer work or not
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once 'vendor/autoload.php';
@@ -41,4 +42,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Sending email failed. The following error occurred : ", $mail->ErrorInfo;
     }
 }
-?>

@@ -2,15 +2,15 @@
 $csrfToken = bin2hex(random_bytes(32)); // Generate a CSRF token
 $_SESSION['csrf_token'] = $csrfToken; // Store the CSRF token in the session
 
- 
- $searchQuery = trim($_GET['q']);  // Validate user input and sanitization (e.g. search query)
- $searchQuery = htmlspecialchars($searchQuery, ENT_QUOTES, 'UTF-8');
+
+$searchQuery = trim($_GET['q']);  // Validate user input and sanitization (e.g. search query)
+$searchQuery = htmlspecialchars($searchQuery, ENT_QUOTES, 'UTF-8');
 
 echo $sanitized_input;
 echo htmlentities($searchQuery); // HTML encode output to prevent XSS
 
 require_once('database.php'); // Include the database.php file
-require_once('DAO.php');
+require_once('DAO.php'); //data access object 
 require_once 'mail.php';
 
 function getDishDetails($id)
@@ -23,14 +23,10 @@ $dish = getDishDetails($id);
 
 $id = $_GET['id']; // Validate and sanitize this input
 $dish = getDishDetails($id);
-
-
 $dishImage = $dish['image']; // display the dish image or plat
 ?>
+
 <?php $showVideo = false; ?> <!--this one to stop video of header on page commande-->
-
-
-
 <?php require_once('../PHP/header.php') ?>
 
 <!--line form and next input can be place above the container line but broke html input boxes-->

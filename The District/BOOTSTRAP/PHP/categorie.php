@@ -82,4 +82,5 @@ $numSlides = ceil(count($categories) / $itemsPerSlide); // Calculate the number 
 
 
 </body>
+
 </html>
