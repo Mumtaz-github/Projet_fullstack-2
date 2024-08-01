@@ -57,15 +57,16 @@
 
  .card-title {
    color:white; 
-    font-size: 25px;
+    font-size: 23px;
    font-weight: bolder;
    font-family: Arial, Helvetica, sans-serif;
    text-align: center;
- }  
+ }
 
  .card-img-top{
   border-radius: 50px;
   padding: 7px;
+  height: 320px;
 }
 
 .cards.body{
@@ -115,6 +116,7 @@
     border-radius: 50px;
     padding: 7px;
     height:270px;
+    
 
   }
    /*pour plats.php images*/
@@ -122,6 +124,8 @@
     border-radius: 50px;
     padding: 7px;
     height:270px;
+   
+    
 
   }
 

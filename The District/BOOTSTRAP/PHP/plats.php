@@ -36,7 +36,7 @@ if (isset($_GET['q'])) {  /*for searchbar of page accueil*/
 
 
 <body>
-  <div class="container py-5">
+  <div class="container py-2">
     <h1 class="text-center mb-5">TOUTES LES PLATS</h1>
     <div id="carouselExample" class="carousel slide text-center" data-bs-ride="carousel">
       <div class="carousel-inner mb-5 mt-5"> <!--mb mean margin bottom and mt mean margin top-->
@@ -51,7 +51,7 @@ if (isset($_GET['q'])) {  /*for searchbar of page accueil*/
                 <div class="col-md-6">
                   <div class="card flex-row plats-card-zoom"> <!--plats-card-no-zoom added for css to out from card zooming of this page-->
                     <a href="plats.php?id=<?= $dish['id']; ?>">
-                      <img src="img/<?= $dish['image']; ?>" style="width:12rem; height:21rem" class="dish-img-top" id="imgpla" alt="<?= $dish['libelle']; ?>">
+                      <img class="dish-img-top" src="img/<?= $dish['image']; ?>" style="width:12rem; height:22rem"  id="imgpla" alt="<?= $dish['libelle']; ?>">
                     </a>
                     <div class="col-md-8">
                       <div class="card-body">

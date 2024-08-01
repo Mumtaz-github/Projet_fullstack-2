@@ -3,7 +3,7 @@ $csrfToken = bin2hex(random_bytes(32)); // Generate a CSRF token
 $_SESSION['csrf_token'] = $csrfToken; // Store the CSRF token in the session
 
  
- $searchQuery = trim($_GET['q']);  // Validate user input (e.g. search query)
+ $searchQuery = trim($_GET['q']);  // Validate user input and sanitization (e.g. search query)
  $searchQuery = htmlspecialchars($searchQuery, ENT_QUOTES, 'UTF-8');
 
 echo $sanitized_input;
