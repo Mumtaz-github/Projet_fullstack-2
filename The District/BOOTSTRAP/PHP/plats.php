@@ -71,7 +71,7 @@ if (isset($_GET['q'])) {  /*for searchbar of page accueil*/
       <!-- Carousel controls -->
       <div class="container-fluid mt-0 mb-0">
         <div class="col">
-          <div class="col d-flex justify-content-evenly">
+          <div class="col d-flex justify-content-between"> <!--justify-content-between, push the buttons towards y and x axis-->
             <button class="carousel-control-prev bg-primary d-none" id="carouselcatprec" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </button>
